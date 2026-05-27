@@ -30,6 +30,14 @@ A sample exported result file generated from running a parametric sweep (e.g., s
 * The total simulated energy (`U_total`).
 * The absolute energies (`U_MA`, `U_MS`, etc.) and the resulting geometric energy fractions (`P_MA`, `P_MS`, etc.) for each region.
 
+## Simulation Models
+The COMSOL Multiphysics model used to generate the energy fractions is available for download:
+
+* **File:** `2D_cross_section.mph`
+* **Software Version:** COMSOL Multiphysics 6.2]
+* **Link:** [Download COMSOL Model](https://drive.google.com/file/d/1tTufEOuxTo7TyxXTF5OpcZRGgbqY1bvx/view?usp=drive_link)
+
+*Note: Please ensure your COMSOL version is compatible with the file version. If you find any issues with the model structure or require specific boundary conditions, please open an issue in this repository.*
 ## The Physics Model
 The calculations in this toolkit distinguish between the *simulated energy fraction* ($P_i$) and the *actual interface participation ratio* ($p_i$). 
 
