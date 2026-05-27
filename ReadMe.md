@@ -20,7 +20,7 @@ A Python/Tkinter GUI application that imports CSV data from COMSOL, calculates $
 
 ### 2. `2D_cross_section.mph` (COMSOL Electrostatics File)
 This COMSOL Multiphysics file contains the 2D cross-section of a CPW structure. To minimize computation time, it exploits device symmetry by simulating only half of the center trace and one ground plane.
-* **Geometry Variables:** Parametrically defined so you can easily sweep the center trace width (`w`), gap to ground (`gap`), trench depth (`d`), and metal thickness.
+* **Geometry Variables:** Parametrically defined so you can easily sweep all the parameters including the center trace width (`CW`), gap to ground (`g`), trench depth (`t_etch`), and metal thickness(`t_M`).
 * **Physics:** Sets up the basic electrostatics for the CPW, incorporating thin (e.g., 10 nm) proxy boundary layers to represent the MA, MS, and SA interfaces.
 * **Integration Variables:** Automatically configured to integrate the stored electric field energy ($U_i$) inside each interface proxy layer, as well as the bulk Silicon and the total simulation bounds.
 
