@@ -21,7 +21,7 @@ A Python/Tkinter GUI application that imports CSV data from COMSOL, calculates $
 ### 2. `2D_cross_section.mph` (COMSOL Electrostatics File)
 This COMSOL Multiphysics file contains the 2D cross-section of a CPW structure. To minimize computation time, it exploits device symmetry by simulating only half of the center trace and one ground plane.
 * **Geometry Variables:** Parametrically defined so you can easily sweep all the parameters including the center trace width (`CW`), gap to ground (`g`), trench depth (`t_etch`), and metal thickness (`t_M`).
-* **Physics:** Sets up the basic electrostatics for the CPW, incorporating thin (e.g., 10 nm) proxy boundary layers to represent the MA, MS, and SA interfaces.
+* **Physics:** Sets up the basic electrostatics for the CPW, incorporating thin (e.g., 3 nm) proxy boundary layers to represent the MA, MS, and SA interfaces.
 * **Integration Variables:** Automatically configured to integrate the stored electric field energy ($U_i$) inside each interface proxy layer, as well as the bulk Silicon and the total simulation bounds.
 
 ### 3. `Example_simulation.csv`
@@ -57,9 +57,7 @@ The geometry and dielectric properties are defined using the following global pa
 | `phi2` | 60/180*pi | substrate etch angle |
 | `phi3` | 45/180*pi | anomoly etch angle in metal |
 
-*(Note 1: The nominal proxy layer parameters `t_nom` and `eps_nom` are used during the FEM simulation and are later scaled to exact physical values inside the Python GUI).*
-*(Note 2: If phi3 = 90-phi1 is inserted, simulation may face an error in parametric sweep to avoid it allow for 5 degree angle difference between ph3 and 90-phi1.).*
-
+*(Note 1: The nominal proxy layer parameters `t_nom` and `eps_nom` are used during the FEM simulation and are later scaled to exact physical values inside the Python GUI).* *(Note 2: If phi3 = 90-phi1 is inserted, simulation may face an error in parametric sweep to avoid it allow for 5 degree angle difference between phi3 and 90-phi1).*
 
 ### Geometry and Meshing Reference
 *The following images illustrate the 2D cross-section configuration used in the `.mph` file.*
