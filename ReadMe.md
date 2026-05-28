@@ -20,7 +20,11 @@ A Python/Tkinter GUI application that imports CSV data from COMSOL, calculates $
 
 ### 2. `2D_cross_section.mph` (COMSOL Electrostatics File)
 This COMSOL Multiphysics file contains the 2D cross-section of a CPW structure. To minimize computation time, it exploits device symmetry by simulating only half of the center trace and one ground plane.
+<<<<<<< HEAD
 * **Geometry Variables:** Parametrically defined so you can easily sweep all the parameters including the center trace width (`CW`), gap to ground (`g`), trench depth (`t_etch`), and metal thickness (`t_M`).
+=======
+* **Geometry Variables:** Parametrically defined so you can easily sweep all the parameters including the center trace width (`CW`), gap to ground (`g`), trench depth (`t_etch`), and metal thickness(`t_M`).
+>>>>>>> 148ba74f24ba17133b1ec3100cb494af3991293d
 * **Physics:** Sets up the basic electrostatics for the CPW, incorporating thin (e.g., 10 nm) proxy boundary layers to represent the MA, MS, and SA interfaces.
 * **Integration Variables:** Automatically configured to integrate the stored electric field energy ($U_i$) inside each interface proxy layer, as well as the bulk Silicon and the total simulation bounds.
 
@@ -30,6 +34,7 @@ A sample exported result file generated from running a parametric sweep (e.g., s
 * The total simulated energy (`U_total`).
 * The absolute energies (`U_MA`, `U_MS`, etc.) and the resulting geometric energy fractions (`P_MA`, `P_MS`, etc.) for each region.
 
+<<<<<<< HEAD
 ---
 
 ## Simulation Setup & Parameters
@@ -66,15 +71,24 @@ The geometry and dielectric properties are defined using the following global pa
 
 ---
 
+=======
+>>>>>>> 148ba74f24ba17133b1ec3100cb494af3991293d
 ## Simulation Models
 The COMSOL Multiphysics model used to generate the energy fractions is available for download:
 
 * **File:** `2D_cross_section.mph`
+<<<<<<< HEAD
 * **Software Version:** COMSOL Multiphysics 6.2
 * **Link:** [Download COMSOL Model](https://drive.google.com/file/d/1tTufEOuxTo7TyxXTF5OpcZRGgbqY1bvx/view?usp=drive_link)
 
 *Note: Please ensure your COMSOL version is compatible with the file version. If you find any issues with the model structure or require specific boundary conditions, please open an issue in this repository.*
 
+=======
+* **Software Version:** COMSOL Multiphysics 6.2]
+* **Link:** [Download COMSOL Model](https://drive.google.com/file/d/1tTufEOuxTo7TyxXTF5OpcZRGgbqY1bvx/view?usp=drive_link)
+
+*Note: Please ensure your COMSOL version is compatible with the file version. If you find any issues with the model structure or require specific boundary conditions, please open an issue in this repository.*
+>>>>>>> 148ba74f24ba17133b1ec3100cb494af3991293d
 ## The Physics Model
 The calculations in this toolkit distinguish between the *simulated energy fraction* ($P_i$) and the *actual interface participation ratio* ($p_i$). 
 
