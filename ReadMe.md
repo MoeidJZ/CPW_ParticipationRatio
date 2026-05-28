@@ -62,7 +62,7 @@ The geometry and dielectric properties are defined using the following global pa
 ### Geometry and Meshing Reference
 *The following images illustrate the 2D cross-section configuration used in the `.mph` file.*
 
-![Annotated Ground Plane Geometry](GP_2_annotated.png)  
+![Annotated Ground Plane Geometry](GP2_annotated.png)  
 *Figure 1: Geometry of the ground plane (structurally identical to the resonator side) with annotated parameter values.*
 
 ![Ground Plane Mesh Structure](GP2_Meshed.png)  
