@@ -30,6 +30,11 @@ A sample exported result file generated from running a parametric sweep (e.g., s
 * The total simulated energy (`U_total`).
 * The absolute energies (`U_MA`, `U_MS`, etc.) and the resulting geometric energy fractions (`P_MA`, `P_MS`, etc.) for each region.
 
+### 4. `comsol_retry.py` (Bonus: COMSOL License Auto-Retrier)
+If your institution uses a limited-seat license for COMSOL Multiphysics, you likely know the frustration of repeatedly trying to open the software only to hit a "License Error" dialog. This script automates the waiting game.
+* **How it works:** It silently runs in the background and attempts to launch COMSOL. If it detects a license denial error, it closes the dialog and waits 5 minutes before trying again. Once a seat opens up and COMSOL stays open past a 60-second grace period, the script assumes success and exits, leaving your session running normally.
+* **Requirements:** You will need the `pywin32` library to allow the script to interact with the Windows GUI. Install it via `pip install pywin32`.
+* **Usage:** Verify that the `COMSOL_PATH` inside the script matches your local installation path, then run `python comsol_retry.py` from your terminal. Sit back and wait while it logs its attempts!
 ---
 
 ## Simulation Setup & Parameters
